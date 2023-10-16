@@ -1,13 +1,13 @@
-package com.gcpTest.gcp;
+package br.com.igorlimagroup.azure;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GcpApplication {
+public class AzureApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GcpApplication.class, args);
+		SpringApplication.run(AzureApplication.class, args);
 	}
 
 }
