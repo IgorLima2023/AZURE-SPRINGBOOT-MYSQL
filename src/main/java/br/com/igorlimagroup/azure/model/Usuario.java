@@ -24,7 +24,15 @@ public class Usuario {
 	private String sobrenome;
 	@Column(nullable = false)
 	private String email;
-
+	@Column(nullable = false)
+	private String cep;
+	private String logradouro;
+	private String complemento;
+	private String bairro;
+	private String localidade;
+	private String uf;
+	
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -33,12 +41,18 @@ public class Usuario {
 		return Objects.equals(idUsuario, usuario.idUsuario) &&
 				Objects.equals(nome, usuario.nome) &&
 				Objects.equals(sobrenome, usuario.sobrenome) &&
-				Objects.equals(email, usuario.email);
+				Objects.equals(email, usuario.email) &&
+				Objects.equals(cep, usuario.cep) &&
+				Objects.equals(logradouro, usuario.logradouro) &&
+				Objects.equals(complemento, usuario.complemento) &&
+				Objects.equals(bairro, usuario.bairro) &&
+				Objects.equals(localidade, usuario.localidade) &&
+				Objects.equals(uf, usuario.uf);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idUsuario, nome, sobrenome, email);
+		return Objects.hash(idUsuario, nome, sobrenome, email, cep, logradouro, complemento, bairro, localidade, uf);
 	}
 
 	@Override
@@ -48,6 +62,12 @@ public class Usuario {
 				", nome='" + nome + '\'' +
 				", sobrenome='" + sobrenome + '\'' +
 				", email='" + email + '\'' +
+				", cep='" + cep + '\'' +
+				", logradouro='" + logradouro + '\'' +
+				", complemento='" + complemento + '\'' +
+				", bairro='" + bairro + '\'' +
+				", localidade='" + localidade + '\'' +
+				", uf='" + uf + '\'' +
 				'}';
 	}
 }
