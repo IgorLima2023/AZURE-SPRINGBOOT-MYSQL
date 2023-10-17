@@ -59,7 +59,7 @@ public class UsuarioController implements CommandLineRunner{
 		return generateResponse("Dados Retornados com Sucesso!", HttpStatus.OK, usuarios);
 	}
 
-	@PostMapping("/save")
+	@PostMapping("/save") 
 	public ResponseEntity<Object> save(@RequestBody Usuario usuario) {
 		Usuario usuarioJ = new Usuario();
 		Usuario usuarioProd = null;
